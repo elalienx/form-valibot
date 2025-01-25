@@ -1,0 +1,23 @@
+{
+  "name": {
+    "id": "name",
+    "label": "Name:",
+    "type": "text",
+    "required": true,
+    "placeholder": "Jhon Doe"
+  },
+  "age": {
+    "id": "age",
+    "label": "Age:",
+    "type": "number",
+    "required": true,
+    "placeholder": "42"
+  },
+  "email": {
+    "id": "email",
+    "label": "Email:",
+    "type": "email",
+    "required": true,
+    "placeholder": "jhon@doe.us"
+  }
+}
