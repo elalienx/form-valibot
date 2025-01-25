@@ -1,0 +1,22 @@
+body {
+  background-color: var(--color-page-background);
+  color: var(--color-black);
+  font-family: var(--font-family);
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium);
+  align-items: start;
+
+  .label {
+    display: inline-block;
+    width: 80px;
+  }
+}
