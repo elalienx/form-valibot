@@ -3,9 +3,9 @@ import { useState } from "react";
 import * as v from "valibot";
 
 // Project files
-import formData from "./data/formData.json";
+import data from "./data/createAccountData.json";
 import InputText from "./component/InputText";
-import formSchema from "./scripts/formSchema";
+import schema from "./schemas/createAccountSchema";
 import "./styles/style.css";
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
   function onSubmit(event: React.FormEvent): void {
     const formData = new FormData(event.target as HTMLFormElement);
     const userInput = Object.fromEntries(formData.entries());
-    const result = v.safeParse(formSchema, userInput);
+    const result = v.safeParse(schema, userInput);
 
     event.preventDefault();
     setResult(JSON.stringify(result));
@@ -24,12 +24,12 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>Form validation with Valibot</h1>
-      <h2>Form</h2>
+      <h1>Form Validation with Valibot</h1>
+      <h2>Create Account</h2>
       <form className="form" onSubmit={(event) => onSubmit(event)}>
-        <InputText item={formData.name} />
-        <InputText item={formData.age} />
-        <InputText item={formData.email} />
+        <InputText item={data.name} />
+        <InputText item={data.age} />
+        <InputText item={data.email} />
         <button className="button">Submit</button>
       </form>
       <h2>Results</h2>
